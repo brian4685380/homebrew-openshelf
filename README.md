@@ -2,6 +2,10 @@
 
 The official Homebrew tap for [OpenShelf](https://github.com/brian4685380/OpenShelf), native macOS floating shelves for files, folders, images, text, and links.
 
+## Latest: v0.8.1
+
+Improves recovery after Desktop/fullscreen switches, restores full-panel drop destinations, and preserves the active shelf's stacking order. See the [v0.8.1 release notes](https://github.com/brian4685380/OpenShelf/releases/tag/v0.8.1).
+
 ## New in v0.8.0: multiple shelves
 
 - Keep independent file groups open, with separate ordering, selection, and pin state.
