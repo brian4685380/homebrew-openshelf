@@ -2,9 +2,19 @@
 
 The official Homebrew tap for [OpenShelf](https://github.com/brian4685380/OpenShelf), native macOS floating shelves for files, folders, images, text, and links.
 
-## Latest: v0.8.1
+## Latest: v0.9.0 — remote files over SSH
 
-Improves recovery after Desktop/fullscreen switches, restores full-panel drop destinations, and preserves the active shelf's stacking order. See the [v0.8.1 release notes](https://github.com/brian4685380/OpenShelf/releases/tag/v0.8.1).
+Run `shelf myserver:/path/to/file` to download a temporary local copy into the active shelf, opening the app/shelf if needed. Remote directories and mixed local/remote inputs are supported, using your existing SSH configuration, aliases, keys, and terminal authentication prompts.
+
+```sh
+shelf myserver:/home/me/report.pdf
+shelf user@myserver:projects/photos
+shelf "myserver:projects/Design notes.txt" ./local-file.txt
+```
+
+Remote originals are never moved, changed, or deleted—even when you drag a downloaded item out. All transfers finish before entries are added; failed or interrupted transfers clean up their partial downloads. Downloaded copies are session-only: save anything you want to keep. Successfully dragged/copied-out temporary sources remain readable until quit.
+
+Both the running app and CLI must be **v0.9.0 or newer**. Restart OpenShelf after upgrading. See the [remote-file guide](https://github.com/brian4685380/OpenShelf#remote-files-over-ssh) and [v0.9.0 release notes](https://github.com/brian4685380/OpenShelf/releases/tag/v0.9.0).
 
 ## New in v0.8.0: multiple shelves
 
@@ -30,6 +40,7 @@ The cask installs the app and links its bundled `shelf` command:
 
 ```sh
 shelf ~/Desktop/report.pdf ~/Downloads/photos
+shelf myserver:/home/me/report.pdf
 shelf --help
 shelf --version
 ```
