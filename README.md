@@ -2,7 +2,11 @@
 
 The official Homebrew tap for [OpenShelf](https://github.com/brian4685380/OpenShelf), native macOS floating shelves for files, folders, images, text, and links.
 
-## Latest: v0.9.0 — remote files over SSH
+## Latest: v0.10.0 — floating-shelf recovery
+
+Prevents a stale mouse-down from leaving the shelf stuck waiting for a finished drag after switching apps or fullscreen Spaces. Recovery now uses live macOS mouse-button state, and still waits during an actual drag. See the [v0.10.0 release notes](https://github.com/brian4685380/OpenShelf/releases/tag/v0.10.0).
+
+## Remote files over SSH (v0.9.0+)
 
 Run `shelf myserver:/path/to/file` to download a temporary local copy into the active shelf, opening the app/shelf if needed. Remote directories and mixed local/remote inputs are supported, using your existing SSH configuration, aliases, keys, and terminal authentication prompts.
 
